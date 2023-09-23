@@ -1,0 +1,41 @@
+Middleware are functions and bits of code that runs between the request and response
+
+such as: app.use(func) and app.get('/', func).
+
+The order of middleware is incredibly important for how it runs. 
+
+Middleware Examples:
+* Logger Middleware to log details of every request
+* Authentication check middleware for protected routes
+* Middleware to parse JSON data from requests
+* Return 404 pages
+
+Static files are like jpeg image files, etc..
+
+By creating an use() function that includes express.statc() as the arg I can 
+now put in a string with a file/folder name within the static function and it will
+allow link elements within the folder to affect the html. Otherwise, beforehand
+I would have had to bake the styles code, for example, in to the html directly
+with a styles element. In a way, this also lets me separate what public can access
+and what they can't.
+
+------ DataBases -------
+
+SQL:
+use tables, rows, and columns to store data
+
+NoSQL:
+uses Collections and Documents to store data
+    - a collection would be a series of User Documents, or in the case of the blog site
+    a series of Blog document.
+
+    -a document in this case represents a single item(a single blog) of data in the data base:
+    example of a document:
+    {
+        "_id": ObjectId(12345),
+        "title": "Opening Party",
+        "snippet": "All about the...",
+        "body": "blah blah blah...."
+    }
+
+    KrebBlogger69 : Osias_ess7
