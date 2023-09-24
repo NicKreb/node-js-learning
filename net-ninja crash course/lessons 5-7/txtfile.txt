@@ -50,7 +50,9 @@ uses Collections and Documents to store data
     'mongodb+srv://<username>:<password>@nickrebcluster.a1xqyxk.mongodb.net/?retryWrites=true&w=majority'
 
     in that string the <username> and <password> elements should be replaced with the username and password
-    within KrebBlogger69's info.
+    within KrebBlogger69's info. NOTE: YOU MUST DELETE THE ENTIRE '<username>' and '<password>' BRACKETS AND ALL TO WORK.
+    also: ...a1xqyxk.mongodb.net/Crabstilts?retryWrites=true&w=majority 
+    AFTER THE .NET/ you need to put the name of the DB you are wanting to access! in order for your code to make changes!
 
     now that we've created our Database with MongoDB, and a user. We are now
     going to connect everything using Mongoose.
@@ -61,6 +63,32 @@ uses Collections and Documents to store data
     which uses query models to get information. It pulls the information we need from the database
     for us using methods detected for the model we need.
 
+    examples: User model > User.get(), User.findByld() | Blog.deleteOne()
+
+    Schemas and Models:
+
+    Schemas define the structure of a type of data / document
+        -Properties and property types
+
+        User Schema:
+        - name (string), required
+        - age (number)
+        - bio (string), required
+    
+        Blog Schema:
+        - title (string), required
+        - snippet (string), required
+        - body (string), required
+
+modles allow us to communicate with database collections:
+
+blog model: blog schema -> get, save, delete, etc -> DB blog collection.
+
+----- Request Types -----
+Get requests to get a resource
+POST requests to creat new data
+DELETE requests to delete data 
+PUT requests to update data
     examples: User model > User.get(), User.findByld() | Blog.deleteOne()
 
     
